@@ -131,6 +131,7 @@ export class State {
     {name: "problem", type: Type.OBJECT, keyMap: problems},
     {name: "initZero", type: Type.BOOLEAN},
     {name: "hideText", type: Type.BOOLEAN},
+      {name: "constante", type: Type.BOOLEAN}
   ];
 
   [key: string]: any;
