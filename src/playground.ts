@@ -68,9 +68,12 @@ let INPUTS: {[name: string]: InputFeature} = {
   "xSquared": {f: (x, y) => x * x, label: "X_1^2"},
   "ySquared": {f: (x, y) => y * y,  label: "X_2^2"},
   "xTimesY": {f: (x, y) => x * y, label: "X_1X_2"},
-  "sinX": {f: (x, y) => Math.sin(x), label: "sin(X_1)"},
-  "sinY": {f: (x, y) => Math.sin(y), label: "sin(X_2)"},
-    "constante": {f: (x,y) => 1, label:"constante"}
+    "constante": {f: (x,y) => 1, label:"constante"},
+    "-x": {f: (x,y) => -1*x, label: "-X_1"},
+    "-y": {f: (x,y) => -1*y, label:"-X_2"},
+    "-xy": {f: (x,y) => -1*x*y, label:"-X_1X_2"},
+    "r": {f: (x,y) => Math.sqrt(x*x + y*y), label: "r"},
+    "theta": {f: (x,y) => Math.atan(y/x), label: "theta"}
 };
 
 let HIDABLE_CONTROLS = [
