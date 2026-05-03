@@ -63,18 +63,22 @@ interface InputFeature {
 }
 
 let INPUTS: {[name: string]: InputFeature} = {
-  "x": {f: (x, y) => x, label: "X_1"},
-  "y": {f: (x, y) => y, label: "X_2"},
-  "xSquared": {f: (x, y) => x * x, label: "X_1^2"},
-  "ySquared": {f: (x, y) => y * y,  label: "X_2^2"},
-  "xTimesY": {f: (x, y) => x * y, label: "X_1X_2"},
-    "constante": {f: (x,y) => 1, label:"constante"},
-    "-x": {f: (x,y) => -1*x, label: "-X_1"},
-    "-y": {f: (x,y) => -1*y, label:"-X_2"},
-    "-xy": {f: (x,y) => -1*x*y, label:"-X_1X_2"},
-    "r": {f: (x,y) => Math.sqrt(x*x + y*y), label: "r"},
-    "theta": {f: (x,y) => Math.atan(y/x), label: "theta"}
-};
+    "x": {f: (x, y) => -x, label: "X_1"},
+    "y": {f: (x, y) => -y, label: "-X_2"},
+    "xSquared": {f: (x, y) => x * x, label: "X_1^2"},
+    "ySquared": {f: (x, y) => y * y, label: "X_2^2"},
+    "f1": {f: (x, y) => y * Math.sin(Math.sqrt(x * x + y * y) - 1), label: "f_1"},
+    "f2": {f: (x, y) => -1*Math.sin(Math.sqrt(x * x + y * y) - 1)*Math.atan2(x, y), label: "f_2"},
+    "f3": {f: (x,y) => Math.cos(Math.sqrt(x * x + y * y + 4))*Math.atan2(x, y), label: "f_3"},
+    "f4": {f: (x,y) => Math.atan2(y,x), label: "f_4"},
+    "f5": {f: (x,y) => Math.cos(Math.sqrt(x * x + y * y) - 1), label: "f_5"},
+    "f6": {f: (x,y) => Math.atan2(y*y,x*x), label: "f_6"},
+    "f7": {f: (x,y) => Math.sqrt(x * x + y * y), label: "f_7"},
+    "f8": {f: (x,y) => Math.sin(Math.sqrt(x * x + y * y) - 1), label: "f_8"},
+    "f9": {f: (x,y) => Math.sin(x), label: "f_9"},
+    "f10": {f: (x,y) => Math.sin(y), label: "f_10"},
+    "f11": {f: (x,y) => Math.sin(x) - Math.sin(y), label: "f_11"}
+}
 
 let HIDABLE_CONTROLS = [
   ["Show test data", "showTestData"],

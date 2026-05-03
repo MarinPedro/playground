@@ -24,14 +24,14 @@ export let activations: {[key: string]: nn.ActivationFunction} = {
   "relu": nn.Activations.RELU,
   "tanh": nn.Activations.TANH,
   "sigmoid": nn.Activations.SIGMOID,
-  "linear": nn.Activations.LINEAR
+  "linear": nn.Activations.LINEAR,
 };
 
 /** A map between names and regularization functions. */
 export let regularizations: {[key: string]: nn.RegularizationFunction} = {
   "none": null,
   "L1": nn.RegularizationFunction.L1,
-  "L2": nn.RegularizationFunction.L2
+  "L2": nn.RegularizationFunction.L2,
 };
 
 /** A map between dataset names and functions that generate classification data. */
@@ -131,12 +131,18 @@ export class State {
     {name: "problem", type: Type.OBJECT, keyMap: problems},
     {name: "initZero", type: Type.BOOLEAN},
     {name: "hideText", type: Type.BOOLEAN},
-      {name: "constante", type: Type.BOOLEAN},
-      {name: "-x", type: Type.BOOLEAN},
-      {name: "-y", type: Type.BOOLEAN},
-      {name: "-xy", type: Type.BOOLEAN},
-      {name: "r", type: Type.BOOLEAN},
-      {name: "theta", type: Type.BOOLEAN}
+      {name: "f1", type: Type.BOOLEAN},
+      {name: "f2", type: Type.BOOLEAN},
+      {name: "f3", type: Type.BOOLEAN},
+      {name: "f4", type: Type.BOOLEAN},
+      {name: "f5", type: Type.BOOLEAN},
+      {name: "f6", type: Type.BOOLEAN},
+      {name: "f7", type: Type.BOOLEAN},
+      {name: "f8", type: Type.BOOLEAN},
+      {name: "f9", type: Type.BOOLEAN},
+      {name: "f10", type: Type.BOOLEAN},
+      {name: "f11", type: Type.BOOLEAN},
+      {name: "f12", type: Type.BOOLEAN}
   ];
 
   [key: string]: any;
